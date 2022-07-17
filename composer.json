@@ -1,10 +1,12 @@
 {
     "autoload": {
         "psr-4": {
-            "Afonso\\Pitstops\\": "src/"
+            "Afonso\\Pitstops\\": "src/",
+            "Afonso\\Pitstops\\Tests\\": "tests/"
         }
     },
     "require": {
-        "league/climate": "^3.8"
+        "league/climate": "^3.8",
+        "phpunit/phpunit": "^9.5"
     }
 }
