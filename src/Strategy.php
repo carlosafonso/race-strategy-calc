@@ -67,14 +67,14 @@ class Strategy
             }
 
             $lapNumberInStint = $lap - $this->stints[$currentStint]->startLap + 1;
-            $lapTime = ($this->optimalLapTime + $this->stints[$currentStint]->tyreType->deltaOverOptimalLapTime)
-                * pow(1 + $this->stints[$currentStint]->tyreType->degradationFactor / 1000, $lapNumberInStint - 1)
+            $lapTime = ($this->optimalLapTime + $this->stints[$currentStint]->tyreSet->type->deltaOverOptimalLapTime)
+                * pow(1 + $this->stints[$currentStint]->tyreSet->type->degradationFactor / 1000, $lapNumberInStint - 1)
                 + ($pittedInLap ? $this->pitstopDelay : 0);
 
             $result->addLap(
                 $lap,
                 (int) $lapTime,
-                $this->stints[$currentStint]->tyreType->name
+                $this->stints[$currentStint]->tyreSet->type->name
             );
         }
 
