@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Afonso\\Pitstops\\": "src/"
+        }
+    },
+    "require": {
+        "league/climate": "^3.8"
+    }
+}
