@@ -33,23 +33,21 @@ class Strategy
      *
      * Stints are considered in the order they are added to this strategy.
      *
-     * @param Afonso\Pitstops\Stint $stint The stint to add to this strategy.
+     * @param \Afonso\Pitstops\Stint $stint The stint to add to this strategy.
      */
     public function addStint(Stint $stint): void
     {
         $this->stints[] = $stint;
         usort(
             $this->stints,
-            function (Stint $a, Stint $b) {
-                return $a->startLap <=> $b->startLap;
-            }
+            fn (Stint $a, Stint $b) => $a->startLap <=> $b->startLap
         );
     }
 
     /**
      * Simulate the given strategy and return its results.
      *
-     * @return Afonso\Pitstops\SimulationResult
+     * @return \Afonso\Pitstops\SimulationResult
      */
     public function simulate(): SimulationResult
     {

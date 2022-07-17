@@ -13,7 +13,7 @@ class Stint
      * Create a new Stint.
      *
      * @param int $startLap The lap at which this stint begins.
-     * @param Afonso\Pitstops\TyreSet $tyreSet The set of tyres used in this
+     * @param \Afonso\Pitstops\TyreSet $tyreSet The set of tyres used in this
      * stint.
      */
     public function __construct(

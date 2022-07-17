@@ -11,7 +11,7 @@ class TyreSet
     /**
      * Create a new TyreSet.
      *
-     * @param Afonso\Pitstops\TyreType $type The type of this tyre set.
+     * @param \Afonso\Pitstops\TyreType $type The type of this tyre set.
      */
     public function __construct(
         public TyreType $type,

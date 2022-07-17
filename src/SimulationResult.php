@@ -10,7 +10,7 @@ namespace Afonso\Pitstops;
 class SimulationResult
 {
     /**
-     * @var Afonso\Pitstops\SimulatedLap[];
+     * @var \Afonso\Pitstops\SimulatedLap[];
      */
     public array $laps = [];
 
@@ -23,7 +23,8 @@ class SimulationResult
      * @param string $tyreTypeName The name of the type of tyre used in this
      * lap.
      */
-    public function addLap(int $lapNumber, int $lapTime, string $tyreTypeName): void {
+    public function addLap(int $lapNumber, int $lapTime, string $tyreTypeName): void
+    {
         $this->laps[] = new SimulatedLap($lapNumber, $lapTime, $tyreTypeName);
     }
 }
