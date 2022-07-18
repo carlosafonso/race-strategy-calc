@@ -27,4 +27,19 @@ class SimulationResult
     {
         $this->laps[] = new SimulatedLap($lapNumber, $lapTime, $tyreTypeName);
     }
+
+    /**
+     * Return the sum of all lap times of this simulation result, in
+     * milliseconds.
+     *
+     * @return int
+     */
+    public function getTotalRaceTime(): int
+    {
+        return array_reduce(
+            $this->laps,
+            fn (int $carry, SimulatedLap $lap) => $carry + $lap->lapTime,
+            0
+        );
+    }
 }
