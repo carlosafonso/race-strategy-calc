@@ -1,4 +1,6 @@
 {
+    "name": "carlosafonso/race-strategy-calc",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Afonso\\Pitstops\\": "src/",
@@ -6,6 +8,7 @@
         }
     },
     "require": {
+        "php": ">=8.0",
         "league/climate": "^3.8",
         "phpunit/phpunit": "^9.5",
         "monolog/monolog": "^2.7"
