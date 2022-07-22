@@ -11,7 +11,7 @@ class Strategy
     /**
      * @var Afonso\Pitstops\Stint[]
      */
-    protected array $stints = [];
+    public array $stints = [];
 
     /**
      * Create a new Strategy configured with the provided parameters.
